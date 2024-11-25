@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>caleb!</title>
+  <style>
+    body {
+      background-image: url('oo.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(100, 1, 0, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .logo img {
+      height: 150px;
+      width: 15%;
+      border-radius: 100px;
+      margin-right: 20px;
+    }
+
+    .logo p {
+      font-family: 'Arial', sans-serif;
+      color: white;
+      font-size: 20px;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #800000;
+      border-radius: 5px;
+      width: 200px;
+      z-index: 10;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      list-style: none;
+    }
+
+    .dropdown li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    .dropdown li a:hover {
+      background-color: #9b2c2c;
+    }
+
+    .aside1, .aside2 {
+      width: 650px;
+      padding: 10px;
+      font-size: 20px;
+      border: 10px solid black;
+      border-image-slice: 20;
+      border-image-repeat: stretch;
+      margin: 0 auto; /* Centers the aside sections */
+      text-align: center; /* Centers the text within these sections */
+    }
+
+    .aside1 {
+      height: 500px;
+    }
+
+    .aside2 {
+      height: 300px;
+      border-image-source: url('d.jpg');
+    }
+
+    .slider {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto; /* Center the slider and add some space */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      margin: 5px;
+      background-color: #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="te.jpg" alt="Logo">
+      <p class="text-shadow">STAND ALONE SENIOR HIGH SCHOOL</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.htm">Home</a>
+          <ul class="dropdown">
+          </ul>
+        </li>
+        
+                 <li><a href="sob.htm">Faculties</a>
+           <ul class="dropdown">
+           </ul>
+         </li>
+          <ul class="dropdown">
+            
+          </ul>
+        </li>
+        <li><a href="#">Academics</a>
+          <ul class="dropdown">
+            
+            <li><a href="caleb.htm">Strands Offered</a></li>
+          </ul>
+        </li>
+         
+         
+     
+        <li><a href="#">Gallery</a>
+          <ul class="dropdown">
+           <li><a href="cal.htm">Events</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Video added here between header and aside1 -->
+  <div>
+    <video width="100%" height="auto" controls>
+      <source src="nene.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <br>
+
+  <div class="aside1">
+    <h2>MISSION</h2>
+    <p class="text-shadow">
+      STAND ALONE SENIOR HIGH SCHOOL will do its best to inculcate and promote academic knowledge and to develop technical and vocational skills among its students while instilling love of God and country. It aims to develop the values of excellence, integrity, and service for its studentry to live and practice a decent way of living after graduation. It vows to harness the efficient and effective delivery of instructions from the faculty members duly sworn to give their best for the students to have academic excellence and superior industry-appropriate skills. As a public Stand Alone Senior High School, it hopes to acquire the facilities needed for the students to acquire a holistic combined glocal viewpoint in serving the cause of the country and the global community and as the historic realization of the Philippines K to 12 Basic Education Program.
+    </p>
+  </div>
+
+  <br>
+
+  <div class="aside2">
+    <h2>VISION</h2>
+    <p class="text-shadow">
+      Embodied in its Rhetoric is the school’s vision for its graduates to be able to become functionally literate twenty-first-century learners who can be accepted to college for all its academic tracks and who can start their own enterprises or be absorbed in the different local and international industries and business establishments through having National Certifications by TESDA.
+    </p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      margin: 5px;
+      background-color: #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: #333;
+    }
+  <br>
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="slides">
+      <div class="slide"><img src="oo.jpeg" alt="Image 1"></div>
+      <div class="slide"><img src="2.jpg" alt="Image 2"></div>
+       <div class="slide"><img src="1.jpg" alt="Image 4"></div>
+      <div class="slide"><img src="5.jpg" alt="Image 5"></div>
+      <div class="slide"><img src="6.jpg" alt="Image 6"></div>
+      <div class="slide"><img src="7.jpg" alt="Image 7"></div>
+      <div class="slide"><img src="8.jpg" alt="Image 8"></div>
+      <div class="slide"><img src="9.jpg" alt="Image 9"></div>
+       <div class="slide"><img src="10.jpg" alt="Image 10"></div>
+      
+    </div>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  <div class="dots">
+    <span class="dot" onclick="setCurrentSlide(0)"></span>
+    <span class="dot" onclick="setCurrentSlide(1)"></span>
+    <span class="dot" onclick="setCurrentSlide(2)"></span>
+    <span class="dot" onclick="setCurrentSlide(3)"></span>
+    <span class="dot" onclick="setCurrentSlide(4)"></span>
+    <span class="dot" onclick="setCurrentSlide(5)"></span>
+     <span class="dot" onclick="setCurrentSlide(6)"></span>
+    <span class="dot" onclick="setCurrentSlide(7)"></span>
+    <span class="dot" onclick="setCurrentSlide(8)"></span>
+    <span class="dot" onclick="setCurrentSlide(9)"></span>
+    
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    const dots = document.querySelectorAll('.dot');
+
+    // Automatically move slides every 2 seconds
+    let slideInterval = setInterval(() => moveSlide(1), 2000);
+
+    function moveSlide(step) {
+      clearInterval(slideInterval); // Stop auto sliding when a button is clicked
+      currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+      updateSlidePosition();
+      slideInterval = setInterval(() => moveSlide(1), 2000); // Restart auto sliding
+    }
+
+    function setCurrentSlide(index) {
+      clearInterval(slideInterval); // Stop auto sliding when a dot is clicked
+      currentIndex = index;
+      updateSlidePosition();
+      slideInterval = setInterval(() => moveSlide(1), 2000); // Restart auto sliding
+    }
+
+    function updateSlidePosition() {
+      slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    // Initialize the first slide as active
+    updateSlidePosition();
+  </script>
+</body>
+</html>

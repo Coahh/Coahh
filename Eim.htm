@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>caleb!</title>
+  <style>
+    /* Body and Background */
+    body {
+      background-image: url('breim.jpg'); /* Background image */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      height: 100vh; /* Ensure the body takes up full height of the viewport */
+    }
+
+    /* Overlay effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(100, 1, 0, 0.5); /* Dark overlay with transparency */
+      z-index: -1; /* Behind the content */
+    }
+
+    /* Header styles */
+    header {
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .logo p {
+      font-family: 'Arial', sans-serif;
+      color: white;
+      font-size: 24px;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Dropdown Menu */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #800000;
+      border-radius: 5px;
+      width: 200px;
+      z-index: 10;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      list-style: none;
+    }
+
+    .dropdown li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    .dropdown li a:hover {
+      background-color: #9b2c2c;
+    }
+
+    /* Center the image */
+    .center-image {
+      position: absolute;
+      top: 40%; /* Adjusted position to ensure it doesn't overlap with text */
+      left: 50%; /* Move the image to the middle horizontally */
+      transform: translate(-50%, -50%); /* Offset the image's own width/height to center it */
+      max-width: 60%; /* Reduced the image size */
+      height: auto;
+    }
+
+    /* Description text style */
+    .description {
+      position: absolute;
+      top: 60%; /* Adjusted to make space below the image */
+      left: 50%;
+      transform: translateX(-50%); /* Center the text horizontally */
+      font-family: 'Roboto', sans-serif; /* Good font for readability */
+      font-size: 20px;
+      text-align: center;
+      color: #ffffff;
+      width: 80%;
+      line-height: 1.5;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="te.jpg" alt="Logo"> <!-- Replace with your logo image -->
+      <p class="text-shadow">STAND ALONE SENIOR HIGH SCHOOL</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sob.html">Faculties</a>
+          <ul class="dropdown">
+            <li><a href="#">Faculty 1</a></li>
+            <li><a href="#">Faculty 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Academics</a>
+          <ul class="dropdown">
+            <li><a href="caleb.html">Strands Offered</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a>
+          <ul class="dropdown">
+            <li><a href="cal.html">Events</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Centered image -->
+  <img src="eimlogo.jpg" alt="Centered Image" class="center-image"> <!-- Replace with your image path -->
+
+  <!-- Text below the image -->
+  <div class="description">
+    The Electrical Installation and Maintenance (EIM) strand is a senior high school program that prepares students for entry-level jobs in the electrical industry. The curriculum teaches students the skills and knowledge needed to maintain and create electrical equipment and properties.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Events</title>
+  <style>
+    /* Body and Background */
+    body {
+      background-image: url('oo.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(100, 1, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .logo img {
+      height: 150px;
+      width: 15%;
+      border-radius: 100px;
+      margin-right: 20px;
+    }
+
+    .logo p {
+      font-family: 'Arial', sans-serif;
+      color: white;
+      font-size: 20px;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #800000;
+      border-radius: 5px;
+      width: 200px;
+      z-index: 10;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      list-style: none;
+    }
+
+    .dropdown li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    .dropdown li a:hover {
+      background-color: #9b2c2c;
+    }
+
+    /* Events Section */
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 900px;
+      margin: 30px auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .event {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #800000;
+      border-radius: 5px;
+      background-color: #4a0000;
+    }
+
+    .event img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .event h3 a {
+      color: #ffcccb;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .event h3 a:hover {
+      color: #f08080;
+    }
+
+    .event p {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="te.jpg" alt="School Logo"> <!-- Replace 'logo.jpg' with actual path -->
+      <p>Stand Alone Senior High School</p>
+    </div>
+  </header>
+  <header>
+      <nav>
+      <ul>
+        <li><a href="index.htm">Home</a>
+          <ul class="dropdown">
+
+          </ul>
+        </li>
+         <li><a href="sob.htm">Faculties</a>
+           <ul class="dropdown">
+           </ul>
+         </li>
+
+          <ul class="dropdown">
+          </ul>
+        </li>
+        <li><a href="#">Academics</a>
+          <ul class="dropdown">
+            <li><a href="caleb.htm">Strands Offered</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a>
+          <ul class="dropdown">
+            <li><a href="cal.htm">Events</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Events Section -->
+  <div class="container">
+    <h1>Stand Alone Senior High School 2024</h1>
+    <h2> EVENTS!</h2>
+
+    <!-- Recognition Event -->
+    <div class="event">
+      <h3><a href="recog.htm" target="_blank">Recognition</a></h3>
+      <img src="re.jpg" alt="Recognition Event"> <!-- Replace with actual image path -->
+      <p>This event celebrates the outstanding achievements of our students and teachers.</p>
+    </div>
+
+    <!-- Science Month Event -->
+    <div class="event">
+      <h3><a href="sci.htm" target="_blank">Science Month</a></h3>
+      <img src="sci.jpg" alt="Science Month"> <!-- Replace with actual image path -->
+      <p>Explore, experiment, and discover the wonders of science through various fun activities and experiments.</p>
+    </div>
+
+    <!-- Teacher's Month Event -->
+    <div class="event">
+      <h3><a href="Teacher.htm" target="_blank">Teacher's Month</a></h3>
+      <img src="E.jpg" alt="Teacher's Month"> <!-- Replace with actual image path -->
+      <p>A special month dedicated to honoring the hard work and dedication of our teachers.</p>
+    </div>
+  </div>
+</body>
+</html>

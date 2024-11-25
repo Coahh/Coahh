@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Slider with Header and Background</title>
+  <style>
+    /* Body and Background */
+    body {
+      background-image: url('oo.jpeg'); /* Replace with your background image */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(100, 1, 0, 0.5); /* Dark overlay effect */
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .logo img {
+      height: 150px;
+      width: 15%;
+      border-radius: 100px;
+      margin-right: 20px;
+    }
+
+    .logo p {
+      font-family: 'Arial', sans-serif;
+      color: white;
+      font-size: 20px;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #800000;
+      border-radius: 5px;
+      width: 200px;
+      z-index: 10;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      list-style: none;
+    }
+
+    .dropdown li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    .dropdown li a:hover {
+      background-color: #9b2c2c;
+    }
+
+    /* 3D Slider */
+    .banner {
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner .slider {
+      position: absolute;
+      width: 200px; 
+      height: 250px;
+      top: 25%; /* Adjust the vertical alignment */
+      left: calc(50% - 100px);  
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateX(-16deg); /* Perspective and tilt */
+      animation: autoRun 20s linear infinite;
+    }
+
+    @keyframes autoRun {
+      from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+      }
+      to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); 
+      }
+    }
+
+    .banner .slider .slide {
+      position: absolute;
+      inset: 0;
+      transform: 
+        rotateY(calc((var(--position) - 1) * (360deg / var(--quantity)))) 
+        translateZ(400px); /* Distance from the center */
+    }
+
+    .banner .slider .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px; /* Rounded corners for each image */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add some depth */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="te.jpg" alt="Logo"> <!-- Replace with your logo image -->
+      <p>STAND ALONE SENIOR HIGHSCHOOL</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sob.html">Faculties</a>
+          <ul class="dropdown">
+            <!-- Faculties dropdown is empty by default -->
+          </ul>
+        </li>
+        <li><a href="#">Academics</a>
+          <ul class="dropdown">
+            <li><a href="caleb.html">Strands Offered</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a>
+          <ul class="dropdown">
+            <li><a href="cal.html">Events</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 3D Slider Section -->
+  <div class="banner">
+    <div class="slider" style="--quantity: 12;"> <!-- Adjust the quantity here -->
+      <div class="slide" style="--position: 1;"><img src="L.jpeg" alt="Image 1"></div>
+      <div class="slide" style="--position: 2;"><img src="K.jpeg" alt="Image 2"></div>
+      <div class="slide" style="--position: 3;"><img src="J.jpeg" alt="Image 3"></div>
+      <div class="slide" style="--position: 4;"><img src="I.jpeg" alt="Image 4"></div>
+      <div class="slide" style="--position: 5;"><img src="H.jpeg" alt="Image 5"></div>
+      <div class="slide" style="--position: 6;"><img src="G.jpeg" alt="Image 6"></div>
+      <div class="slide" style="--position: 7;"><img src="F.jpeg" alt="Image 7"></div>
+
+      <div class="slide" style="--position: 8;"><img src="E.jpeg" alt="Image 8"></div>
+            <div class="slide" style="--position: 9;"><img src="D.jpeg" alt="Image 9"></div>
+                  <div class="slide" style="--position: 10;"><img src="C.jpeg" alt="Image 10"></div>
+                  <div class="slide" style="--position: 11;"><img src="B.jpeg" alt="Image 11"></div>
+              <div class="slide" style="--position: 12;"><img src="A.jpeg" alt="Image 12"></div>          
+    </div>
+  </div>
+</body>
+</html>
